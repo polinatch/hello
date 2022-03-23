@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "clusterpolinaask-a8d6"
+    labels:
+        app: "clusterpolinaask-a8d6"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "clusterpolinaask-a8d6"
